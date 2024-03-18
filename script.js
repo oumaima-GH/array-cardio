@@ -106,20 +106,18 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
 
-    // const sortByLastName = inventors.sort((a, b) => {
-    //   const first = a.last.toUpperCase()
-    //   const second = b.last.toUpperCase()
+    const sortByLastName = inventors.sort((a, b) => {
 
-    //   if (first < second) {
-    //     return -1
-    //   }
-    //   if (first > second) {
-    //     return 1
-    //   }
-    //   return 0
-    // })
+      if (a.last < b.last) {
+        return -1
+      }
+      if (a.last > b.last) {
+        return 1
+      }
+      return 0
+    })
     
-    // console.log(sortByLastName);
+    console.log(sortByLastName);
 
 
 
@@ -129,31 +127,31 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
-    const dataObj = {}
-    for(let i = 0; i < data.length; i++){
-      const instance = data[i]
-    if (dataObj[instance]) {
-        dataObj[instance] ++
-    } else {
-        dataObj[instance] = 1
-    }
-    }
+    // const dataObj = {}
+    // for(let i = 0; i < data.length; i++){
+    //   const instance = data[i]
+    // if (dataObj[instance]) {
+    //     dataObj[instance] ++
+    // } else {
+    //     dataObj[instance] = 1
+    // }
+    // }
 
-    console.log(dataObj);
+    // console.log(dataObj);
 
 
 // with reduce **************************************************************************
     
-    const sumUpInstances = data.reduce((acc, curr) => {
-      if (acc[curr]) {
-         acc[curr]++
-        } else {
-           acc[curr] = 1
-          }
-        return acc
-    }, {})
+    // const sumUpInstances = data.reduce((acc, curr) => {
+    //   if (acc[curr]) {
+    //      acc[curr]++
+    //     } else {
+    //        acc[curr] = 1
+    //       }
+    //     return acc
+    // }, {})
 
-      console.log(sumUpInstances);
+    //   console.log(sumUpInstances);
     
       // ## Array Cardio Day 2
 
